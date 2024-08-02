@@ -1,0 +1,138 @@
+.wrapper {
+    --search-border-radius: 92px;
+    background-color: var(--white);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: var(--default-layout-header-height);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    
+}
+
+.inner {
+    height: 100%;
+    width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px var(--default-layout-horizontal-spacer);
+}
+
+.logo-link {
+    display: flex;
+}
+
+.search-result,
+.search {
+    width: 361px;
+}
+.search {
+    position: relative;
+    height: 46px;
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: var(--search-border-radius);
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+
+    input {
+        height: 100%;
+        font-size: 1.6rem;
+        color: var(--black);
+        background-color: transparent;
+        caret-color: var(--primary);
+        flex: 1;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.clear,
+.loading {
+    position: absolute;
+    right: 72px;
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.line {
+    background-color: rgba(22, 24, 35, 0.12);
+    height: 28px;
+    width: 1px;
+}
+
+.search-btn {
+    width: 52px;
+    height: 100%;
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.06);
+        cursor: pointer;
+    }
+}
+
+.custome {
+    color: blue !important;
+}
+
+// Actions
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.action-btn {
+    background-color: transparent;
+    font-size: 2.2rem;
+    position: relative;
+    display: flex;
+    color: #161823;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.more-btn {
+    margin-left: 28px;
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 4px 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: 'ProximaNova', sans-serif;
+    background-color: var(--primary);
+}
